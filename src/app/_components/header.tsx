@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-8">
           <Link href="/" className="block">
             <span className="sr-only">Home</span>
-            <Logo/>
+            <Logo />
           </Link>
           <NavLinks />
         </div>
