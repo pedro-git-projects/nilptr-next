@@ -1,14 +1,11 @@
-'use client';
+"use client";
 
 interface DownloadButtonProps {
   resource: string;
   message: string;
 }
 
-const DownloadBtn: React.FC<DownloadButtonProps> = ({
-  resource,
-  message,
-}) => {
+const DownloadBtn: React.FC<DownloadButtonProps> = ({ resource, message }) => {
   return (
     <a
       className="download-button group relative inline-flex items-center overflow-hidden"
@@ -39,4 +36,3 @@ const DownloadBtn: React.FC<DownloadButtonProps> = ({
 };
 
 export default DownloadBtn;
-

@@ -1,20 +1,12 @@
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "../lib/api";
 import Link from "next/link";
 
 export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
   return (
     <main>
       <section className="">
         <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
           <div className="mx-auto max-w-xl text-center">
-            <h1 className="text-3xl font-extrabold sm:text-5xl">
+            <h1 className="text-4xl font-extrabold sm:text-5xl">
               nilptr
               <strong className="font-extrabold text-[#cc241d] sm:block">
                 {" "}
@@ -42,8 +34,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      {morePosts.length > 0 && <MoreStories posts={morePosts} />}
     </main>
   );
 }

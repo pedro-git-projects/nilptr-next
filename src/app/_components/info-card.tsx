@@ -19,7 +19,9 @@ const InfoCard: React.FC<Props> = ({ title, content, icon }) => {
     focus:outline-none focus:ring"
     >
       <span className="inline-block rounded-lg bg-light-background dark:bg-background  p-3">
-        {React.createElement(icon, { className: 'text-light-text dark:text-text h-6 w-6' })}
+        {React.createElement(icon, {
+          className: "text-light-text dark:text-text h-6 w-6",
+        })}
       </span>
 
       <h2 className="mt-2 font-bold">{title}</h2>

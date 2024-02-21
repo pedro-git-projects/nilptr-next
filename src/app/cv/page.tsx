@@ -5,9 +5,9 @@ import {
   FaPenRuler,
   FaComputer,
   FaMobileScreen,
-} from 'react-icons/fa6';
-import DownloadBtnGrid from '../_components/download-btn-grid';
-import InfoCard from '../_components/info-card';
+} from "react-icons/fa6";
+import DownloadBtnGrid from "../_components/download-btn-grid";
+import InfoCard from "../_components/info-card";
 
 const CV: React.FC = () => {
   return (
@@ -71,6 +71,5 @@ const CV: React.FC = () => {
     </section>
   );
 };
-
 
 export default CV;
