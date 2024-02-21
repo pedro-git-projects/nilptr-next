@@ -11,9 +11,9 @@ const Logo: React.FC = () => {
   return (
     <>
       {darkMode ? (
-        <Image src={LogoDark} alt={"dark logo"} className="h-8" />
+        <Image src={LogoDark} alt="dark logo" width={32} height={32} />
       ) : (
-        <Image src={LogoLight} alt={"light logo"} className="h-8" />
+        <Image src={LogoLight} alt="light logo" width={32} height={32} />
       )}
     </>
   );

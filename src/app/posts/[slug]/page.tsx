@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "../../../lib/api";
 import { CMS_NAME } from "../../../lib/constants";
 import markdownToHtml from "../../../lib/markdownToHtml";
-import Alert from "../../_components/alert";
 import Container from "../../_components/container";
 import { PostBody } from "../../_components/post-body";
 import { PostHeader } from "../../_components/post-header";
@@ -19,7 +18,6 @@ export default async function Post({ params }: Params) {
 
   return (
     <main>
-      <Alert preview={post.preview} />
       <Container>
         <article className="mb-32">
           <PostHeader
