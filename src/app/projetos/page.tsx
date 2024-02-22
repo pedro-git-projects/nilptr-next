@@ -44,7 +44,7 @@ export default function Projects() {
   return (
     <main>
       {loading ? (
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           {Array.from({ length: projectsPerPage }).map((_, index) => (
             <PlaceholderPostCard key={index} />
           ))}
@@ -52,7 +52,7 @@ export default function Projects() {
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           {projects.map(project => (
             <ProjectCard key={project.slug} project={project} />
           ))}

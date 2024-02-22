@@ -9,7 +9,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
   const { title, date, coverImage, excerpt, slug } = post;
 
   return (
-    <article className="flex bg-light-background-light -xl dark:bg-background-light dark:shadow-gray-800/25">
+    <div className="flex bg-light-background-light shadow-[#bdae93]  dark:bg-background-light dark:shadow-gray-800/25">
       <div className="rotate-180 p-2" style={{ writingMode: "vertical-lr" }}>
         <time
           dateTime={date}
@@ -57,7 +57,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
           </a>
         </div>
       </div>
-    </article>
+    </div>
   );
 };
 

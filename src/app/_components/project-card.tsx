@@ -7,28 +7,35 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
-    <article className="rounded-lg border border-gray-100 bg-light-bg-dark p-4 shadow-sm transition hover:shadow-lg sm:p-6 dark:border-gray-800 dark:bg-background-light dark:shadow-gray-700/25">
-      <Image src={project.languageSVG} alt="tech logo" width={64} height={32} />
+    <div
+      className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25"
+    >
+      <div className="rounded-[10px] bg-white p-4 !pt-20 sm:p-6 dark:bg-gray-900">
+        <time dateTime="2022-10-10" className="block text-xs text-gray-500 dark:text-gray-400">
+          10th Oct 2022
+        </time>
 
-      <a href="#">
-        <h3 className="mt-0.5 text-lg font-medium">{project.title}</h3>
-      </a>
+        <a href="#">
+          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
+            How to center an element using JavaScript and jQuery
+          </h3>
+        </a>
 
-      <p className="mt-2 line-clamp-3 text-sm/relaxed">{project.excerpt}</p>
+        <div className="mt-4 flex flex-wrap gap-1">
+          <span
+            className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100"
+          >
+            Snippet
+          </span>
 
-      <a
-        href={project.githubLink}
-        className="group mt-4 inline-flex items-center gap-1 text-sm font-medium"
-      >
-        Ver no Github
-        <span
-          aria-hidden="true"
-          className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-        >
-          &rarr;
-        </span>
-      </a>
-    </article>
+          <span
+            className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100"
+          >
+            JavaScript
+          </span>
+        </div>
+      </div>
+    </div>
   );
 };
 

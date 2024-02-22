@@ -17,7 +17,37 @@
   }
 
   article {
+    p {
+      @apply block font-sans text-xl antialiased font-normal leading-relaxed text-inherit;
+    }
 
+    h1 {
+      @apply block font-sans text-5xl antialiased font-semibold leading-tight tracking-normal text-inherit;
+    }
+
+    h2 {
+      @apply block antialiased tracking-normal font-sans text-4xl font-semibold leading-tight text-inherit;
+
+    }
+
+    h3 {
+      @apply block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-inherit;
+
+    }
+
+    h4 {
+      @apply block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-inherit;
+
+    }
+
+    h5 {
+      @apply block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-inherit;
+
+    }
+
+    h6 {
+      @apply block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit;
+    }
   }
 
   main {
