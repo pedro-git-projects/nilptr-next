@@ -1,3 +1,5 @@
+'use server';
+
 import { Post } from "@/interfaces/post";
 import { Project } from "@/interfaces/project";
 import fs from "fs";
@@ -6,11 +8,11 @@ import { join } from "path";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-export function getPostSlugs() {
+export async function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string) {
+export async function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -19,23 +21,45 @@ export function getPostBySlug(slug: string) {
   return { ...data, slug: realSlug, content } as Post;
 }
 
-export function getAllPosts(): Post[] {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
+export async function getAllPosts(): Promise<Array<Post>> {
+  try {
+    const slugs = await getPostSlugs();
+    if (!slugs) {
+      throw new Error("Failed to get post slugs");
+    }
+
+    const posts = await Promise.all(
+      slugs.map(async (slug) => {
+        try {
+          return await getPostBySlug(slug);
+        } catch (error) {
+          console.error(`Error fetching post for slug "${slug}":`, error);
+          return null;
+        }
+      })
+    );
+
+    if (posts == null) {
+      throw new Error("posts is null");
+    }
+
+    // @ts-ignore
+    return posts.filter(Boolean).sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
+  } catch (error) {
+    console.error(`Error fetching all posts:`, error);
+    return [];
+  }
 }
 
 
 const projectsDirectory = join(process.cwd(), "_projects");
 
-export function getProjectSlugs() {
+export async function getProjectSlugs() {
   return fs.readdirSync(projectsDirectory);
 }
 
-export function getProjectBySlug(slug: string) {
+export async function getProjectBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(projectsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -44,11 +68,31 @@ export function getProjectBySlug(slug: string) {
   return { ...data, slug: realSlug } as Project;
 }
 
-export function getAllProjects(): Project[] {
-  const slugs = getProjectSlugs();
-  const projects = slugs
-    .map((slug) => getProjectBySlug(slug))
-    // sort projects by date in descending order
-    .sort((project1, project2) => (project1.date > project2.date ? -1 : 1));
-  return projects;
+export async function getAllProjects(): Promise<Array<Project>> {
+  try {
+    const slugs = await getProjectSlugs();
+    if (!slugs) {
+      throw new Error("Failed to get project slugs");
+    }
+
+    const projects = await Promise.all(
+      slugs.map(async (slug) => {
+        try {
+          return await getProjectBySlug(slug);
+        } catch (error) {
+          console.error(`Error fetching project for slug "${slug}":`, error);
+          return null;
+        }
+      })
+    );
+
+    const filteredProjects = projects.filter(Boolean);
+
+    // @ts-ignore
+    return filteredProjects.sort((project1, project2) => (project1.date > project2.date ? -1 : 1));
+  } catch (error) {
+    console.error(`Error fetching all projects:`, error);
+    // Handle global errors gracefully (e.g., log, provide error message)
+    return []; // Or return an empty array for consistency
+  }
 }
