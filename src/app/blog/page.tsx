@@ -5,10 +5,11 @@ import PostCard from "../_components/post-card";
 import { Post } from "@/interfaces/post";
 import { useEffect, useState } from "react";
 import Pagination from "../_components/pagination";
+import PlaceholderPostCard from "../_components/placeholder-post-card";
 
 export default function Blog() {
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
+  const postsPerPage = 4;
   const [posts, setPosts] = useState<Array<Post> | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
@@ -45,7 +46,11 @@ export default function Blog() {
   return (
     <main>
       {loading ? (
-        <p>Loading posts...</p>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
+          {Array.from({ length: postsPerPage }).map((_, index) => (
+            <PlaceholderPostCard key={index} />
+          ))}
+        </div>
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
