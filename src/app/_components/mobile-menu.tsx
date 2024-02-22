@@ -36,22 +36,22 @@ const MobileMenu: React.FC = () => {
           <ul className="space-y-1">
             <li>
               <Link href="/projetos" className="mobile-menu-link">
-                Projetos
+                projetos
               </Link>
             </li>
             <li>
               <Link href="/blog" className="mobile-menu-link">
-                Blog
+                blog
               </Link>
             </li>
             <li>
               <Link href="/cv" className="mobile-menu-link">
-                CV
+                cv
               </Link>
             </li>
             <li>
               <Link href="/servicos" className="mobile-menu-link">
-                Serviços
+                serviços
               </Link>
             </li>
           </ul>

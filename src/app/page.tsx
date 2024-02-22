@@ -8,7 +8,7 @@ export default function Index() {
           <div className="mx-auto max-w-xl text-center">
             <h1 className="text-4xl font-extrabold sm:text-5xl">
               nilptr
-              <strong className="font-extrabold text-[#cc241d] sm:block">
+              <strong className="font-extrabold text-[#cc241d] sm:block pt-4">
                 {" "}
                 engenharia de software descomplicada{" "}
               </strong>
