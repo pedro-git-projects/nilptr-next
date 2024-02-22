@@ -61,7 +61,7 @@ export default function Blog() {
         </div>
       )}
       <div className="m-4">
-        {posts && (
+        {posts && totalPages > 1 && (
           <Pagination
             totalPages={totalPages}
             currentPage={currentPage}

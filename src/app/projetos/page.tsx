@@ -11,7 +11,7 @@ export default function Projects() {
   const [projects, setProjects] = useState<Array<Project>>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const projectsPerPage = 4; // Adjust this value as needed
+  const projectsPerPage = 4;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
