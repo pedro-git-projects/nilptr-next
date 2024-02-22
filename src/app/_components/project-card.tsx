@@ -8,7 +8,7 @@ interface Props {
 const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
     <article className="rounded-lg border border-gray-100 bg-light-bg-dark p-4 shadow-sm transition hover:shadow-lg sm:p-6 dark:border-gray-800 dark:bg-background-light dark:shadow-gray-700/25">
-      <Image src={project.languageSVG} alt="tech logo" width={64} height={64} />
+      <Image src={project.languageSVG} alt="tech logo" width={64} height={32} />
 
       <a href="#">
         <h3 className="mt-0.5 text-lg font-medium">{project.title}</h3>

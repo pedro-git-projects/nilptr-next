@@ -1,7 +1,3 @@
-import Avatar from "./avatar";
-import CoverImage from "./cover-image";
-import DateFormatter from "./date-formatter";
-import { PostTitle } from "@/app/_components/post-title";
 import { type Author } from "@/interfaces/author";
 
 type Props = {
@@ -11,23 +7,26 @@ type Props = {
   author: Author;
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({ title, date, author }: Props) {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
+      <h1 className="text-5xl font-extrabold sm:text-5xl text-center m-2">
+        {title}
+      </h1>
+      <div className="max-w-2xl mx-auto flex flex-col items-center mb-6">
+        <div className="block mb-2 text-xl font-bold">{author.name}</div>
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-        <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
-        </div>
+
+      <div className="flex items-center justify-center mb-6 text-lg">
+        <span className="h-px flex-1 bg-light-text dark:bg-text"></span>
+        <span className="shrink-0 px-6">
+          {new Date(date).toLocaleDateString("pt-BR", {
+            month: "short",
+            day: "2-digit",
+            year: "numeric",
+          })}
+        </span>
+        <span className="h-px flex-1 bg-light-text dark:bg-text"></span>
       </div>
     </>
   );
