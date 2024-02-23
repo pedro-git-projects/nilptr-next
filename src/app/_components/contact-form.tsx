@@ -113,7 +113,7 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                       name="option"
                     />
 
-                    <span className="text-sm">Aplicativo (Desktop)</span>
+                    <span className="text-sm">Aplicação (Desktop)</span>
                   </label>
                 </div>
               </div>
