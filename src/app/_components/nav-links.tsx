@@ -14,7 +14,10 @@ const NavLinks: React.FC = () => {
           <Link href="/cv">cv</Link>
         </li>
         <li>
-          <Link href="/servicos">serviços</Link>
+          <Link href="/sobre">sobre</Link>
+        </li>
+        <li>
+          <Link href="/contato">contato</Link>
         </li>
       </ul>
     </nav>

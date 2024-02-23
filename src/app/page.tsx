@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
     <main>
       <section className="">

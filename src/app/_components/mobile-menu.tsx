@@ -52,10 +52,19 @@ const MobileMenu: React.FC = () => {
             <li>
               <Link
                 onClick={toggleMobileMenu}
-                href="/servicos"
+                href="/sobre"
                 className="mobile-menu-link"
               >
-                serviços
+                sobre
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={toggleMobileMenu}
+                href="/sobre"
+                className="mobile-menu-link"
+              >
+                contato
               </Link>
             </li>
           </ul>
