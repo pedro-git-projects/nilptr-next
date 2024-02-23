@@ -1,41 +1,62 @@
 import { Project } from "@/interfaces/project";
+import Link from "next/link";
 import Image from "next/image";
 
 interface Props {
   project: Project;
 }
-
 const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
-    <div
-      className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25"
-    >
-      <div className="rounded-[10px] bg-white p-4 !pt-20 sm:p-6 dark:bg-gray-900">
-        <time dateTime="2022-10-10" className="block text-xs text-gray-500 dark:text-gray-400">
-          10th Oct 2022
-        </time>
+    <article className="overflow-hidden rounded-lg border border-[#d5c4a1] bg-light-background-light shadow-sm dark:border-gray-800 dark:bg-background-light dark:shadow-gray-700/25">
+      <Image
+        alt=""
+        src={project.languageSVG}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+        className="h-56 w-full object-cover"
+      />
 
+      <div className="p-4 sm:p-6">
         <a href="#">
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
-            How to center an element using JavaScript and jQuery
+          <h3 className="text-lg font-bold text-[#282828] dark:text-text">
+            {project.title}
           </h3>
         </a>
 
-        <div className="mt-4 flex flex-wrap gap-1">
-          <span
-            className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100"
-          >
-            Snippet
-          </span>
+        <p className="mt-2 line-clamp-3 text-sm/relaxed">{project.excerpt}</p>
 
-          <span
-            className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100"
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+          <Link
+            href="#"
+            className="group mt-4 inline-flex items-center gap-1 text-sm font-medium"
           >
-            JavaScript
-          </span>
+            Ler artigo
+            <span
+              aria-hidden="true"
+              className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+            >
+              &rarr;
+            </span>
+          </Link>
+
+          <Link
+            href={project.githubLink}
+            target="_blank"
+            className="group mt-4 inline-flex items-center gap-1 text-sm font-medium"
+          >
+            Github
+            <span
+              aria-hidden="true"
+              className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+            >
+              &rarr;
+            </span>
+          </Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

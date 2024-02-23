@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Index() {
+const Index = () => {
   return (
     <main>
       <section className="">
@@ -36,4 +36,6 @@ export default function Index() {
       </section>
     </main>
   );
-}
+};
+
+export default Index;

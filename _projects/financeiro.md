@@ -1,8 +1,8 @@
 ---
-title: "Controle Financeiro"
+title: "API para Sistemas de Controle de Finaças Pessoais"
 language: "TypeScript"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+excerpt: " API REST utilizando o framework Express e MongoDB onde usuários podem se cadastrar e criar gerenciadores de finaças para suas contas pessoais."
 date: "2024-02-16T05:35:07.322Z"
 languageSVG: "/assets/blog/hello-world/cover.jpg"
-githubLink: "https://github.com/pedro-git-projects/go-sdl2-raycasting-engine"
+githubLink: "https://github.com/pedro-git-projects/projeto-integrado-backend"
 ---

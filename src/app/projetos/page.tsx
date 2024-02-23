@@ -43,6 +43,7 @@ export default function Projects() {
 
   return (
     <main>
+      <h1 className="text-3xl font-bold sm:text-4xl m-6">Projetos</h1>
       {loading ? (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           {Array.from({ length: projectsPerPage }).map((_, index) => (
@@ -59,7 +60,7 @@ export default function Projects() {
         </div>
       )}
       {totalPages > 1 && (
-        <div className="m-4">
+        <div className="m-6">
           <Pagination
             totalPages={totalPages}
             currentPage={currentPage}

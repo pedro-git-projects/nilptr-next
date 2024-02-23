@@ -1,7 +1,7 @@
 ---
 title: "Xadrez Online"
 language: "Go"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+excerpt: "Jogo online de xadrez em tempo real criado utilizando Go no backend e React no frotnend."
 date: "2024-02-16T05:35:07.322Z"
 languageSVG: "/assets/blog/hello-world/cover.jpg"
 githubLink: "https://github.com/pedro-git-projects/go-sdl2-raycasting-engine"

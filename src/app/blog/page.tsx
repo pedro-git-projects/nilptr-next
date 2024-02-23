@@ -45,6 +45,7 @@ export default function Blog() {
 
   return (
     <main>
+      <h1 className="text-3xl font-bold sm:text-4xl m-6">Publicações</h1>
       {loading ? (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
           {Array.from({ length: postsPerPage }).map((_, index) => (
@@ -60,7 +61,7 @@ export default function Blog() {
           ))}
         </div>
       )}
-      <div className="m-4">
+      <div className="m-6">
         {posts && totalPages > 1 && (
           <Pagination
             totalPages={totalPages}
