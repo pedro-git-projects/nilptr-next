@@ -1,5 +1,9 @@
+import Resume from "../_components/resume";
+
 const Sobre: React.FC = () => {
-  return <></>;
+  return (
+    <Resume/>
+  );
 };
 
 export default Sobre;
