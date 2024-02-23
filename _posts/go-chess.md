@@ -1,7 +1,7 @@
 ---
 title: "Estudo de Caso: Xadrez Online"
 excerpt: "TODO."
-coverImage: "/assets/projects/chess.jpg"
+coverImage: "/assets/projects/chess_2.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Pedro Martins Pereira 
