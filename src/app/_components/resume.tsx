@@ -89,7 +89,7 @@ const Resume: React.FC = () => {
 
             <div className="mb-6">
               <div className="flex justify-between flex-wrap gap-2 w-full">
-                <span className="font-bold">Habilidades Técnicas</span>
+                <span className="font-bold pb-1">Habilidades Técnicas</span>
               </div>
               <ul className="list-disc pl-1">
                 <li className="pb-1">
