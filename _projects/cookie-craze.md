@@ -1,9 +1,9 @@
 ---
 title: "Cookie Clicker para Celular"
 stack: ["Expo", "React Native", "TypeScript"]
-excerpt: "Jogo online de xadrez em tempo real criado utilizando Go no backend e React no frotnend."
+excerpt: "Jogo para Android e IOS desenvolvido com React Native."
 date: "2023-02-16T05:35:07.322Z"
 image: "/assets/projects/cookie.jpg"
-slug: "/go-chess"
-githubLink: "https://github.com/pedro-git-projects/go-sdl2-raycasting-engine"
+slug: "/cookie-craze"
+githubLink: "https://github.com/pedro-git-projects/cookie-craze"
 ---

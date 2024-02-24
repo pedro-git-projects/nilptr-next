@@ -1,8 +1,9 @@
 ---
 title: "Prontuário Eletrônico IESB"
 stack: ["NestJS", "TypeScript"]
-excerpt: " API REST utilizando o framework Express e MongoDB onde usuários podem se cadastrar e criar gerenciadores de finaças para suas contas pessoais."
+excerpt: "Prontuário eletrônico desenvolvido para uso nos cursos de saúde do Instituto de Educação Superior de Brasília."
 date: "2024-01-16T05:35:07.322Z"
 image: "/assets/projects/doctor_2.jpg"
-githubLink: "https://github.com/pedro-git-projects/projeto-integrado-backend"
+slug: "/prontuario-eletronico-iesb"
+githubLink: "https://github.com/fabrica-bayarea/prontuario-back"
 ---

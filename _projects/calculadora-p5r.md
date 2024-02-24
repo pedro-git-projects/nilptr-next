@@ -1,7 +1,7 @@
 ---
 title: "Calculadora de Fusão para Persona 5"
-stack: ["Python", "Flask"]
-excerpt: "Jogo online de xadrez em tempo real criado utilizando Go no backend e React no frotnend."
+stack: ["Python", "Flask", "React", "Tailwind"]
+excerpt: "Aplicação full stack desenvolvida como compêndio e calculadora de fusão para personas do jogo Persona 5 Royal."
 date: "2023-07-12T05:35:07.322Z"
 image: "/assets/projects/futaba.jpg"
 slug: "/calculadora-de-fusao"
