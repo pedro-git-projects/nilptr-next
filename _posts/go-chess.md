@@ -1,12 +1,12 @@
 ---
 title: "Estudo de Caso: Xadrez Online"
 excerpt: "TODO."
-coverImage: "/assets/projects/chess_2.jpg"
-date: "2020-03-16T05:35:07.322Z"
+coverImage: "/assets/projects/chess.jpg"
+date: "2023-08-05T05:35:07.322Z"
 author:
   name: Pedro Martins Pereira 
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/projects/chess.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
