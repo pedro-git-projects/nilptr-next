@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
     <div className="container mx-auto py-8">
       <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
         <div className="col-span-4 sm:col-span-3">
-          <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 rounded-lg p-6">
+          <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-6">
             <div className="flex flex-col items-center">
               <Image
                 src="/assets/blog/authors/pedro.jpeg"
@@ -25,13 +25,13 @@ const Resume: React.FC = () => {
               <div className="mt-6 flex flex-wrap gap-4 justify-center">
                 <Link
                   href="/contato"
-                  className="bg-button hover:bg-button-active hover:text-[#282828] text-text-dark dark:text-text-dark py-2 px-4 rounded"
+                  className="bg-button hover:bg-button-active hover:text-[#282828] text-text-dark dark:text-text-dark py-2 px-4"
                 >
                   Contato
                 </Link>
                 <Link
                   href="/cv"
-                  className="bg-[#458588] hover:bg-[#fabd2f] dark:hover:text-[#282828] dark:text-text text-text-dark hover:text-[#282828]  py-2 px-4 rounded"
+                  className="bg-[#458588] hover:bg-[#fabd2f] dark:hover:text-[#282828] dark:text-text text-text-dark hover:text-[#282828]  py-2 px-4"
                 >
                   Currículo
                 </Link>
@@ -50,7 +50,7 @@ const Resume: React.FC = () => {
           </div>
         </div>
         <div className="col-span-4 sm:col-span-9">
-          <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 rounded-lg p-6">
+          <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-6">
             <div className="mb-6">
               <div className="flex justify-between flex-wrap gap-2 w-full">
                 <span className="font-bold">Formação</span>

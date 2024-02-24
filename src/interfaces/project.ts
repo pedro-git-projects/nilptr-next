@@ -1,7 +1,7 @@
 export type Project = {
   slug: string;
   title: string;
-  language: string;
+  stack: Array<string>;
   date: string;
   image: string;
   excerpt: string;

@@ -31,7 +31,7 @@ const Pagination: React.FC<Props> = ({
           <a
             href="#"
             onClick={() => handlePageClick(i)}
-            className={`block size-8 rounded border ${
+            className={`block size-8 border ${
               currentPage === i
                 ? "bg-light-background text-light-text border-[#fabd2f] dark:border-text-light dark:bg-background dark:text-text-light "
                 : "bg-light-background text-light-text border-gray-100 border-light-background dark:border-[#282828] dark:bg-background dark:text-text-light"
@@ -51,7 +51,7 @@ const Pagination: React.FC<Props> = ({
         <a
           href="#"
           onClick={handlePrevPage}
-          className="inline-flex size-8 items-center justify-center rounded border border-light-background bg-light-background  text-gray-900 rtl:rotate-180 dark:border-background dark:bg-background dark:text-white"
+          className="inline-flex size-8 items-center justify-center border border-light-background bg-light-background  text-gray-900 rtl:rotate-180 dark:border-background dark:bg-background dark:text-white"
         >
           <span className="sr-only">Prev Page</span>
           <svg
@@ -75,7 +75,7 @@ const Pagination: React.FC<Props> = ({
         <a
           href="#"
           onClick={handleNextPage}
-          className="inline-flex size-8 items-center justify-center rounded border border-light-background bg-light-background  text-gray-900 rtl:rotate-180 dark:border-background dark:bg-background dark:text-white"
+          className="inline-flex size-8 items-center justify-center border border-light-background bg-light-background  text-gray-900 rtl:rotate-180 dark:border-background dark:bg-background dark:text-white"
         >
           <span className="sr-only">Next Page</span>
           <svg

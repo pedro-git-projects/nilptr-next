@@ -1,10 +1,9 @@
 ---
-title: "Xadrez Online"
-stack: ["Go", "React"]
+title: "Sistema Eletrônico de Frequência Escolar"
+stack: ["Flutter", "Go"]
 excerpt: "Jogo online de xadrez em tempo real criado utilizando Go no backend e React no frotnend."
-date: "2024-07-05T05:35:07.322Z"
+date: "2023-02-16T05:35:07.322Z"
 image: "/assets/projects/chess_2.jpg"
 slug: "/go-chess"
 githubLink: "https://github.com/pedro-git-projects/go-sdl2-raycasting-engine"
 ---
-
