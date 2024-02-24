@@ -7,7 +7,7 @@ interface Props {
 }
 const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
-    <article className="overflow-hidden rounded-lg border border-[#d5c4a1] bg-light-background-light shadow-sm dark:border-gray-800 dark:bg-background-light dark:shadow-gray-700/25">
+    <article className="overflow-hidden border border-[#d5c4a1] bg-light-background-light shadow-sm dark:border-gray-800 dark:bg-background-light dark:shadow-gray-700/25">
       <Image
         alt=""
         src={project.image}
@@ -18,11 +18,16 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       />
 
       <div className="p-4 sm:p-6">
-        <a href="#">
-          <h3 className="text-lg font-bold text-[#282828] dark:text-text">
-            {project.title}
-          </h3>
-        </a>
+        <h3 className="text-lg font-bold">{project.title}</h3>
+
+        {project.stack.map(tech => (
+          <span
+            key={tech}
+            className="whitespace-nowrap bg-[#83a598] px-2.5 py-0.5 text-xs dark:text-light-text mr-1"
+          >
+            {tech}
+          </span>
+        ))}
 
         <p className="mt-2 line-clamp-3 text-sm/relaxed">{project.excerpt}</p>
 

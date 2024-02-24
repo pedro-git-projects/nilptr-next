@@ -10,7 +10,7 @@ interface Props {
 const InfoCard: React.FC<Props> = ({ title, content, icon }) => {
   return (
     <div
-      className="block rounded-xl border 
+      className="block border 
     border-light-background dark:border-background 
     p-4 shadow-sm 
     dark:hover:border-accent hover:border-light-text
@@ -18,7 +18,7 @@ const InfoCard: React.FC<Props> = ({ title, content, icon }) => {
     dark:hover:ring-accent hover:ring-light-text 
     focus:outline-none focus:ring"
     >
-      <span className="inline-block rounded-lg bg-light-background dark:bg-background  p-3">
+      <span className="inline-block bg-light-background dark:bg-background  p-3">
         {React.createElement(icon, {
           className: "text-light-text dark:text-text h-6 w-6",
         })}

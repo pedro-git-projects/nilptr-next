@@ -68,13 +68,13 @@
 }
 
 .download-button {
-  @apply rounded dark:bg-button bg-light-button px-8 py-3 text-text dark:text-light-text focus:outline-none focus:ring hover:text-text dark:hover:text-light-text active:bg-light-button-active dark:active:bg-button-active cursor-pointer;
+  @apply dark:bg-button bg-light-button px-8 py-3 text-text dark:text-light-text focus:outline-none focus:ring hover:text-text dark:hover:text-light-text active:bg-light-button-active dark:active:bg-button-active cursor-pointer;
 }
 
 .services-button {
-  @apply block w-full dark:text-text rounded bg-[#cc241d] px-12 py-3 text-sm font-medium text-text shadow hover:bg-red-700 hover:hover:text-black focus:outline-none sm:w-auto;
+  @apply block w-full dark:text-text bg-[#cc241d] px-12 py-3 text-sm font-medium text-text shadow hover:bg-red-700 hover:hover:text-black focus:outline-none sm:w-auto;
 }
 
 .to-cv-button {
-  @apply bg-light-secondary dark:bg-light-secondary dark:text-text text-text block w-full rounded px-12 py-3 text-sm font-medium text-[#cc241d] text-text dark:hover:text-black shadow hover:text-black focus:outline-none focus:ring active:text-red-500 sm:w-auto;
+  @apply bg-light-secondary dark:bg-light-secondary dark:text-text text-text block w-full px-12 py-3 text-sm font-medium text-[#cc241d] text-text dark:hover:text-black shadow hover:text-black focus:outline-none focus:ring active:text-red-500 sm:w-auto;
 }

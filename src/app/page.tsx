@@ -24,7 +24,7 @@ const Index: React.FC = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link href="/servicos" className="services-button">
+              <Link href="/contato" className="services-button">
                 Contrate
               </Link>
               <Link href="/cv" className="to-cv-button">

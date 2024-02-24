@@ -19,14 +19,14 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="rounded-lg p-8 shadow-lg lg:col-span-3 lg:p-12 bg-light-background-light shadow-[#bdae93]  dark:bg-background-light dark:shadow-gray-800/25">
+          <div className="p-8 shadow-lg lg:col-span-3 lg:p-12 bg-light-background-light shadow-[#bdae93]  dark:bg-background-light dark:shadow-gray-800/25">
             <form action="#" className="space-y-4">
               <div>
                 <label className="sr-only" htmlFor="name">
                   Razão Social
                 </label>
                 <input
-                  className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] w-full rounded-lg border-light-border dark:border-[#3c3836] p-3 text-sm bg-light-background dark:bg-background"
+                  className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] w-full border-light-border dark:border-[#3c3836] p-3 text-sm bg-light-background dark:bg-background"
                   placeholder="Razão Social"
                   type="text"
                   id="name"
@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
                     E-mail
                   </label>
                   <input
-                    className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background w-full rounded-lg border-light-border dark:border-[#3c3836] p-3 text-sm dark:bg-background"
+                    className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background w-full border-light-border dark:border-[#3c3836] p-3 text-sm dark:bg-background"
                     placeholder="Endereço de e-mail"
                     type="email"
                     id="email"
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
                     Telefone
                   </label>
                   <input
-                    className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background w-full rounded-lg border-light-border dark:border-[#3c3836] p-3 text-sm dark:bg-background"
+                    className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background w-full border-light-border dark:border-[#3c3836] p-3 text-sm dark:bg-background"
                     placeholder="Número de telefone"
                     type="tel"
                     id="phone"
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
                 <div>
                   <label
                     htmlFor="Option1"
-                    className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer rounded-lg border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
+                    className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
 dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-[:checked]:text-text dark:hover:border-[#d79921]"
                     tabIndex="0"
                   >
@@ -82,7 +82,7 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                 <div>
                   <label
                     htmlFor="Option2"
-                    className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer rounded-lg border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
+                    className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
 dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-[:checked]:text-text dark:hover:border-[#d79921]"
                     tabIndex="0"
                   >
@@ -101,7 +101,7 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                 <div>
                   <label
                     htmlFor="Option3"
-                    className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer rounded-lg border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
+                    className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
 dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-[:checked]:text-text dark:hover:border-[#d79921]"
                     tabIndex="0"
                   >
@@ -124,7 +124,7 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                 </label>
 
                 <textarea
-                  className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] w-full rounded-lg border-light-border bg-light-background dark:bg-background placeholder-[#504945] dark:placeholder-[#bdae93] p-3 text-sm dark:border-[#3c3836]"
+                  className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] w-full border-light-border bg-light-background dark:bg-background placeholder-[#504945] dark:placeholder-[#bdae93] p-3 text-sm dark:border-[#3c3836]"
                   placeholder="Mensagem"
                   rows="8"
                   id="message"
@@ -134,7 +134,7 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
               <div className="mt-4">
                 <button
                   type="submit"
-                  className="inline-block w-full rounded-lg bg-[#282828] hover:bg-warning px-5 py-3 font-medium text-text sm:w-auto"
+                  className="inline-block w-full bg-[#282828] hover:bg-warning px-5 py-3 font-medium text-text sm:w-auto"
                 >
                   Solicitar Orçamento
                 </button>
