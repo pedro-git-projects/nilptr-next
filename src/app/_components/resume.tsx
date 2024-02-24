@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaYoutube } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubAlt } from "react-icons/fa6";
@@ -22,18 +23,18 @@ const Resume: React.FC = () => {
               <h1 className="text-xl font-bold">Pedro Martins Pereira</h1>
               <p>Engenheiro de Software</p>
               <div className="mt-6 flex flex-wrap gap-4 justify-center">
-                <a
-                  href="#"
+                <Link
+                  href="/contato"
                   className="bg-button hover:bg-button-active hover:text-[#282828] text-text-dark dark:text-text-dark py-2 px-4 rounded"
                 >
                   Contato
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/cv"
                   className="bg-[#458588] hover:bg-[#fabd2f] dark:hover:text-[#282828] dark:text-text text-text-dark hover:text-[#282828]  py-2 px-4 rounded"
                 >
                   Currículo
-                </a>
+                </Link>
               </div>
             </div>
             <hr className="my-6 border-t border-gray-300" />
