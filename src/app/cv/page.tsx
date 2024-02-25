@@ -55,11 +55,19 @@ const CV: React.FC = () => {
               content="Soluções condizentes com a sua necessidade e orçamento."
               icon={FaPenRuler}
             />
-            <InfoCard
-              title="Multiplataforma"
-              content="Implante seu produto em ambientes web, mobile e desktop."
-              icon={FaComputer}
-            />
+
+            <div className="block border border-light-background dark:border-background p-4 shadow-sm dark:hover:border-accent hover:border-light-text hover:ring-1 dark:hover:ring-accent hover:ring-light-text focus:outline-none focus:ring">
+              <span className="inline-block bg-light-background dark:bg-background p-3">
+                <FaComputer className="text-light-text dark:text-text h-6 w-6" />
+              </span>
+              <h2 className="mt-2 font-bold max-w-full sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl break-all">
+                Multiplataforma
+              </h2>
+              <p className="hidden sm:mt-1 sm:block sm:text-sm">
+                Implante seu produto em ambientes web, mobile e desktop.
+              </p>
+            </div>
+
             <InfoCard
               title="Responsivo"
               content="Soluções preparadas para os mais diversos ambientes de execução."
