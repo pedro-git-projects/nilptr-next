@@ -126,7 +126,7 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                 <textarea
                   className="focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] w-full border-light-border bg-light-background dark:bg-background placeholder-[#504945] dark:placeholder-[#bdae93] p-3 text-sm dark:border-[#3c3836]"
                   placeholder="Mensagem"
-                  rows="8"
+                  rows={8}
                   id="message"
                 ></textarea>
               </div>
