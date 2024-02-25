@@ -101,6 +101,9 @@ const Resume: React.FC = () => {
                   HTML, CSS e Tailwind.
                 </li>
                 <li className="pb-1">
+                  Projetos mobile em produção construídos com Flutter e React Native.
+                </li>
+                <li className="pb-1">
                   Forte entendimento de algoritmos, estruturas de dados e
                   padrões de projeto.
                 </li>
