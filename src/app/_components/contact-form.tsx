@@ -65,13 +65,13 @@ const ContactForm: React.FC = () => {
                     htmlFor="Option1"
                     className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
 dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-[:checked]:text-text dark:hover:border-[#d79921]"
-                    tabIndex="0"
+                    tabIndex={0}
                   >
                     <input
                       className="sr-only"
                       id="Option1"
                       type="radio"
-                      tabIndex="-1"
+                      tabIndex={-1}
                       name="option"
                     />
 
@@ -84,13 +84,13 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                     htmlFor="Option2"
                     className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
 dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-[:checked]:text-text dark:hover:border-[#d79921]"
-                    tabIndex="0"
+                    tabIndex={0}
                   >
                     <input
                       className="sr-only"
                       id="Option2"
                       type="radio"
-                      tabIndex="-1"
+                      tabIndex={-1}
                       name="option"
                     />
 
@@ -103,13 +103,13 @@ dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-
                     htmlFor="Option3"
                     className="block bg-light-background dark:border-[#3c3836] dark:bg-background w-full cursor-pointer border border-light-border p-3 hover:border-black has-[:checked]:border-black has-[:checked]:bg-[#282828] has-[:checked]:text-text
 dark:has-[:checked]:border-[#fabd2f] dark:has-[:checked]:bg-background-dark has-[:checked]:text-text dark:hover:border-[#d79921]"
-                    tabIndex="0"
+                    tabIndex={0}
                   >
                     <input
                       className="sr-only"
                       id="Option3"
                       type="radio"
-                      tabIndex="-1"
+                      tabIndex={-1}
                       name="option"
                     />
 
