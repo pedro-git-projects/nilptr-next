@@ -4,6 +4,7 @@ import { Post } from "@/interfaces/post";
 import { getAllPosts } from "@/lib/api";
 import FlexSearch, { Index } from "flexsearch";
 import { useEffect, useRef, useState } from "react";
+import { FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -11,7 +12,7 @@ const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<string[]>([]);
   const [posts, setPosts] = useState<Post[] | null>(null);
-  const inputRef = useRef<HTMLInputElement>(null); // Ref for the input element
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -85,15 +86,15 @@ const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-4 rounded-lg w-1/2">
-        <button
-          className="absolute top-2 right-2 text-gray-600 cursor-pointer"
-          onClick={handleModalClose}
-        >
-          Close
-        </button>
+      <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-4 rounded-lg w-1/2 relative">
+        <div className="flex justify-end">
+          <button className="mb-2" onClick={handleModalClose}>
+            <FiX size={18} />
+          </button>
+        </div>
+
         <input
-          className="w-full border focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background border-light-border dark:border-[#3c3836] text-sm dark:bg-background rounded-md p-2"
+          className="w-full border focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background border-light-border dark:border-[#3c3836] text-sm dark:bg-background rounded-md p-2 pl-8"
           value={query}
           onChange={handleInputChange}
           placeholder="Começe a digitar para pesquisar..."
