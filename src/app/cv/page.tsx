@@ -23,7 +23,7 @@ const CV: React.FC = () => {
             </h2>
             <p className="mt-4">
               Desenvolvedor com experiência sólida na criação de software
-              resliente e escalável sob demanda personalizda.
+              resiliente e escalável sob demanda personalizda.
               <br />
               <span className="font-bold mt-2">
                 Baixe o meu currículo completo em pdf abaixo.
