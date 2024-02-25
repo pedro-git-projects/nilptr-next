@@ -3,7 +3,7 @@ import NavLinks from "./nav-links";
 import ThemeToggler from "./theme-toggler";
 import MobileMenu from "./mobile-menu";
 import Logo from "./logo";
-import Search from "./search";
+import SearchInput from "./search-input";
 
 const Header: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           <NavLinks />
         </div>
         <div className="flex items-center gap-4">
-          <Search />
+          <SearchInput />
           <ThemeToggler />
           <MobileMenu />
         </div>
