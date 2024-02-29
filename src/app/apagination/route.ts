@@ -17,11 +17,11 @@ export const POST = async (req: Request) => {
     }
     const projects = await getAllProjects();
     const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
-    const paginatedPosts = projects.slice(
+    const paginatedProjects = projects.slice(
       (currentPage - 1) * PROJECTS_PER_PAGE,
       currentPage * PROJECTS_PER_PAGE,
     );
-    return Response.json({ posts: paginatedPosts, totalPages });
+    return Response.json({ projects: paginatedProjects, totalPages });
   } catch (err: any) {
     return Response.json({ error: err.message });
   }
