@@ -40,11 +40,16 @@ export async function getAllPosts(): Promise<Array<Post>> {
       }),
     );
 
-    const filteredPosts = posts.filter(post => post !== null) as Post[];
+    if (posts === null) {
+      throw new Error("posts is null");
+    }
 
-    return filteredPosts.sort((post1, post2) => {
-      return post1.date > post2.date ? -1 : 1;
-    });
+    // @ts-ignore
+    return posts
+      .filter(Boolean)
+      // @ts-ignore
+      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
   } catch (error) {
     console.error(`Error fetching all posts:`, error);
     return [];
@@ -100,11 +105,10 @@ export const getAllProjects = async (): Promise<Array<Project>> => {
       }),
     );
 
-    const filteredProjects = projects.filter(
-      project => project !== null,
-    ) as Project[];
-
+    const filteredProjects = projects.filter(Boolean);
+    // @ts-ignore
     return filteredProjects.sort((project1, project2) =>
+      // @ts-ignore
       project1.date > project2.date ? -1 : 1,
     );
   } catch (error) {
