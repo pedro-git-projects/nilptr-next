@@ -6,6 +6,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 
+
 const postsDirectory = join(process.cwd(), "_posts");
 
 export async function getPostSlugs() {
@@ -92,7 +93,6 @@ export async function getAllProjects(): Promise<Array<Project>> {
     return filteredProjects.sort((project1, project2) => (project1.date > project2.date ? -1 : 1));
   } catch (error) {
     console.error(`Error fetching all projects:`, error);
-    // Handle global errors gracefully (e.g., log, provide error message)
-    return []; // Or return an empty array for consistency
+    return [];
   }
 }
