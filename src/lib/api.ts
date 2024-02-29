@@ -100,9 +100,10 @@ export const getAllProjects = async (): Promise<Array<Project>> => {
       }),
     );
 
-    const filteredProjects = projects.filter(Boolean);
+    const filteredProjects = projects.filter(
+      project => project !== null,
+    ) as Project[];
 
-    // @ts-ignore
     return filteredProjects.sort((project1, project2) =>
       project1.date > project2.date ? -1 : 1,
     );
