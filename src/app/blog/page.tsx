@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = 'force-dynamic';
-
 import { getPaginatedPosts } from "@/lib/api";
 import PostCard from "../_components/post-card";
 import { Post } from "@/interfaces/post";
@@ -26,12 +24,24 @@ const Blog: React.FC<Props> = ({ searchParams }) => {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchProjects = async () => {
       try {
         setLoading(true);
-        const { posts, totalPages } = await getPaginatedPosts(currentPage);
-        setTotalPages(totalPages);
+        const response = await fetch("https://nilptr.dev/bpagination", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ currentPage }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch projects");
+        }
+
+        const { posts, totalPages } = await response.json();
         setPosts(posts);
+        setTotalPages(totalPages);
       } catch (error: any) {
         setError(error);
       } finally {
@@ -39,7 +49,7 @@ const Blog: React.FC<Props> = ({ searchParams }) => {
       }
     };
 
-    fetchPosts();
+    fetchProjects();
   }, [currentPage]);
 
   return (

@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = 'force-dynamic';
-
 import { getPaginatedProjects } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Project } from "@/interfaces/project";
@@ -29,8 +27,19 @@ const Projects: React.FC<Props> = ({ searchParams }) => {
     const fetchProjects = async () => {
       try {
         setLoading(true);
-        const { projects, totalPages } =
-          await getPaginatedProjects(currentPage);
+        const response = await fetch("https://nilptr.dev/apagination", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ currentPage }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch projects");
+        }
+
+        const { projects, totalPages } = await response.json();
         setProjects(projects);
         setTotalPages(totalPages);
       } catch (error: any) {
