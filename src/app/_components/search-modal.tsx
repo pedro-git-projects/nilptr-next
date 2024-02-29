@@ -67,7 +67,7 @@ const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-4 rounded-lg w-1/2 relative">
+      <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-4 w-1/2 relative">
         {loading && <Spinner />}
         <div className="flex justify-end">
           <button className="mb-2" onClick={handleModalClose}>
@@ -76,7 +76,7 @@ const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
 
         <input
-          className="w-full border focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background border-light-border dark:border-[#3c3836] text-sm dark:bg-background rounded-md p-2 pl-8"
+          className="w-full border focus:border-[#fabd2f] dark:focus:border-[#fabd2f] focus:ring-[#fabd2f] placeholder-[#7c6f64] dark:placeholder-[#bdae93] bg-light-background border-light-border dark:border-[#3c3836] text-sm dark:bg-background p-2 pl-8"
           value={query}
           onChange={handleInputChange}
           placeholder="&#x1F50D; Começe a digitar para pesquisar..."
@@ -111,7 +111,7 @@ const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <ul>
                       <li className="pt-2">
                         <Link
-                          className="block rounded-lg px-4 py-2 text-sm font-medium dark:bg-[#504945] dark:hover:bg-[#1d2021] bg-[#fbf1c7] hover:bg-[#ebdbb2]"
+                          className="block px-4 py-2 text-sm font-medium dark:bg-[#504945] dark:hover:bg-[#1d2021] bg-[#fbf1c7] hover:bg-[#ebdbb2]"
                           href={`/posts/${post.slug}`}
                           onClick={handleModalClose}
                         >
