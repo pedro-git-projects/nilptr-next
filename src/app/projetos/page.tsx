@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { getPaginatedProjects } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Project } from "@/interfaces/project";
@@ -31,8 +33,7 @@ const Projects: React.FC<Props> = ({ searchParams }) => {
           await getPaginatedProjects(currentPage);
         setProjects(projects);
         setTotalPages(totalPages);
-      } catch (error) {
-        // @ts-ignore
+      } catch (error: any) {
         setError(error);
       } finally {
         setLoading(false);

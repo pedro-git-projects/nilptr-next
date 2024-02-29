@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { getPaginatedPosts } from "@/lib/api";
 import PostCard from "../_components/post-card";
 import { Post } from "@/interfaces/post";
@@ -30,8 +32,7 @@ const Blog: React.FC<Props> = ({ searchParams }) => {
         const { posts, totalPages } = await getPaginatedPosts(currentPage);
         setTotalPages(totalPages);
         setPosts(posts);
-      } catch (error) {
-        // @ts-ignore
+      } catch (error: any) {
         setError(error);
       } finally {
         setLoading(false);
