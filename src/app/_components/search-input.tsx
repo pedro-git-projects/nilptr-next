@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import SearchModal from "./search-modal";
 import SearchBtn from "./search-btn";
 

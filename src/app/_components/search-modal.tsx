@@ -66,7 +66,7 @@ const SearchModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
       <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-4 w-1/2 relative">
         {loading && <Spinner />}
         <div className="flex justify-end">
