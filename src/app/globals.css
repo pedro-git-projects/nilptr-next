@@ -48,6 +48,24 @@
     h6 {
       @apply block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit;
     }
+
+    table {
+      @apply w-full text-sm text-left rtl:text-right;
+    }
+
+    thead {
+      @apply text-xs uppercase;
+    }
+
+    tr {
+      @apply odd:bg-[#fbf1c7] odd:dark:bg-[#282828] even:bg-[#f9f5d7] even:dark:bg-[#3c3836];
+    }
+
+    th {
+      @apply px-6 py-3;
+    }
+
+
   }
 
   main {
