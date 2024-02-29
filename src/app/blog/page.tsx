@@ -1,6 +1,5 @@
 "use client";
 
-import { getPaginatedPosts } from "@/lib/api";
 import PostCard from "../_components/post-card";
 import { Post } from "@/interfaces/post";
 import { useEffect, useState } from "react";

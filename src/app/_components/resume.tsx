@@ -53,6 +53,16 @@ const Resume: React.FC = () => {
           <div className="bg-light-background-light shadow-[#bdae93] dark:bg-background-light border-light-border dark:border-[#3c3836] dark:shadow-gray-800/25 p-6">
             <div className="mb-6">
               <div className="flex justify-between flex-wrap gap-2 w-full">
+                <span className="font-bold">nilptr</span>
+              </div>
+              <p className="mt-2">
+                nilptr é a junção das palavras "nil pointer", traduzida do inglês como "ponteiro nulo". Este é o nome do meu canal no YouTube e a marca que escolhi para representar minha atuação como contratante independente.
+              </p>
+            </div>
+
+
+            <div className="mb-6">
+              <div className="flex justify-between flex-wrap gap-2 w-full">
                 <span className="font-bold">Formação</span>
               </div>
               <p className="mt-2">
@@ -80,9 +90,9 @@ const Resume: React.FC = () => {
                 no Youtube.
                 <br />
                 <br />
-                Trabalhei ainda na multinacional NTT Data e desemepnhei diversos
+                Trabalhei ainda na multinacional NTT Data e desempenhei diversos
                 trabalhos dentro da academia, o último sendo liderar uma Squad
-                na fábrica de software do Instituto de Educação supeior de
+                na fábrica de software do Instituto de Educação Superior de
                 Brasília.
               </p>
             </div>
@@ -97,8 +107,11 @@ const Resume: React.FC = () => {
                   e Node.
                 </li>
                 <li className="pb-1">
-                  Versado em desenvovlimento frontend com React, Svelte, HUGO,
+                  Versado em desenvolvimento frontend com React, Svelte, HUGO,
                   HTML, CSS e Tailwind.
+                </li>
+                <li className="pb-1">
+                  Experiência sólida em desenvolvimento mobile com Flutter e React Native, criando aplicativos responsivos para diversas plataformas.
                 </li>
                 <li className="pb-1">
                   Forte entendimento de algoritmos, estruturas de dados e

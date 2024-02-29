@@ -5,7 +5,6 @@ import { Project } from "@/interfaces/project";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
-import { POSTS_PER_PAGE, PROJECTS_PER_PAGE } from "./constants";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -51,22 +50,6 @@ export async function getAllPosts(): Promise<Array<Post>> {
   }
 }
 
-export const getPaginatedPosts = async (
-  currentPage: number,
-): Promise<{ posts: Array<Post>; totalPages: number } | never> => {
-  try {
-    const posts = await getAllPosts();
-    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-    const paginatedPosts = posts.slice(
-      (currentPage - 1) * POSTS_PER_PAGE,
-      currentPage * POSTS_PER_PAGE,
-    );
-    return { posts: paginatedPosts, totalPages };
-  } catch (error: any) {
-    throw error;
-  }
-};
-
 const projectsDirectory = join(process.cwd(), "_projects");
 
 export const getProjectSlugs = async () => {
@@ -110,21 +93,5 @@ export const getAllProjects = async (): Promise<Array<Project>> => {
   } catch (error) {
     console.error(`Error fetching all projects:`, error);
     return [];
-  }
-};
-
-export const getPaginatedProjects = async (
-  currentPage: number,
-): Promise<{ projects: Array<Project>; totalPages: number } | never> => {
-  try {
-    const allProjects = await getAllProjects();
-    const totalPages = Math.ceil(allProjects.length / PROJECTS_PER_PAGE);
-    const paginatedProjects = allProjects.slice(
-      (currentPage - 1) * PROJECTS_PER_PAGE,
-      currentPage * PROJECTS_PER_PAGE,
-    );
-    return { projects: paginatedProjects, totalPages };
-  } catch (error: any) {
-    throw error;
   }
 };
