@@ -1,8 +1,11 @@
 import nodemailer from "nodemailer";
 
 export const POST = async (req: Request) => {
-  if (req.method !== 'POST') {
-    return Response.json({ error: 'Method Not Allowed', allowedMethods: ['POST'] })
+  if (req.method !== "POST") {
+    return Response.json({
+      error: "Method Not Allowed",
+      allowedMethods: ["POST"],
+    });
   }
 
   try {
@@ -11,7 +14,7 @@ export const POST = async (req: Request) => {
     console.log(name, email, phone, option, message);
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PSWD,
@@ -35,4 +38,4 @@ export const POST = async (req: Request) => {
   } catch (err: any) {
     return Response.json({ error: err.message });
   }
-}
+};

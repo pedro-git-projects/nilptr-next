@@ -1,31 +1,36 @@
 "use client";
 
-import { getAllProjects } from "@/lib/api";
-import ProjectCard from "../_components/project-card";
+import { getPaginatedProjects } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Project } from "@/interfaces/project";
+import ProjectCard from "../_components/project-card";
 import PlaceholderPostCard from "../_components/placeholder-post-card";
-import Pagination from "../_components/pagination";
+import { PROJECTS_PER_PAGE } from "@/lib/constants";
+import URLPagination from "../_components/url-pagination";
 
-export default function Projects() {
+interface SearchParams {
+  page?: string;
+}
+
+interface Props {
+  searchParams?: SearchParams;
+}
+
+const Projects: React.FC<Props> = ({ searchParams }) => {
   const [projects, setProjects] = useState<Array<Project>>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-  const projectsPerPage = 6;
+  const currentPage = Number(searchParams?.page) || 1;
   const [loading, setLoading] = useState(true);
+  const [totalPages, setTotalPages] = useState(0);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         setLoading(true);
-        const allProjects = await getAllProjects();
-        const paginatedProjects = allProjects.slice(
-          (currentPage - 1) * projectsPerPage,
-          currentPage * projectsPerPage,
-        );
-        setTotalPages(Math.ceil(allProjects.length / projectsPerPage));
-        setProjects(paginatedProjects);
+        const { projects, totalPages } =
+          await getPaginatedProjects(currentPage);
+        setProjects(projects);
+        setTotalPages(totalPages);
       } catch (error) {
         // @ts-ignore
         setError(error);
@@ -37,16 +42,12 @@ export default function Projects() {
     fetchProjects();
   }, [currentPage]);
 
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
   return (
     <main>
       <h1 className="text-3xl font-bold sm:text-4xl m-6">Projetos</h1>
       {loading ? (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-          {Array.from({ length: projectsPerPage }).map((_, index) => (
+          {Array.from({ length: PROJECTS_PER_PAGE }).map((_, index) => (
             <PlaceholderPostCard key={index} />
           ))}
         </div>
@@ -61,13 +62,11 @@ export default function Projects() {
       )}
       {totalPages > 1 && (
         <div className="m-6">
-          <Pagination
-            totalPages={totalPages}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
+          <URLPagination totalPages={totalPages} />
         </div>
       )}
     </main>
   );
-}
+};
+
+export default Projects;

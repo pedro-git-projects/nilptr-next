@@ -1,24 +1,46 @@
+"use client";
+
+import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+
 interface Props {
   totalPages: number;
-  currentPage: number;
-  onPageChange: (pageNumber: number) => void;
 }
 
-const Pagination: React.FC<Props> = ({
-  totalPages,
-  currentPage,
-  onPageChange,
-}) => {
+const URLPagination: React.FC<Props> = ({ totalPages }) => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const currentPage = Number(searchParams.get("page")) || 1;
+  const createPageURL = (pageNumber: number | string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("page", pageNumber.toString());
+    return `${pathname}?${params.toString()}`;
+  };
+
+  useEffect(() => {
+    if (currentPage < 1) {
+      handlePageClick(1);
+    } else if (currentPage > totalPages) {
+      handlePageClick(totalPages);
+    }
+  }, [currentPage, totalPages]);
+
   const handlePrevPage = () => {
-    onPageChange(Math.max(currentPage - 1, 1));
+    if (currentPage > 1) {
+      handlePageClick(currentPage - 1);
+    }
   };
 
   const handleNextPage = () => {
-    onPageChange(Math.min(currentPage + 1, totalPages));
+    if (currentPage < totalPages) {
+      handlePageClick(currentPage + 1);
+    }
   };
 
   const handlePageClick = (pageNumber: number) => {
-    onPageChange(pageNumber);
+    const params = new URLSearchParams(searchParams);
+    params.set("page", pageNumber.toString());
+    window.location.href = `${pathname}?${params.toString()}`;
   };
 
   const renderPaginationButtons = () => {
@@ -94,4 +116,4 @@ const Pagination: React.FC<Props> = ({
   );
 };
 
-export default Pagination;
+export default URLPagination;

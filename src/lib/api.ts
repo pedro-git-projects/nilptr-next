@@ -1,28 +1,28 @@
-'use server';
+"use server";
 
 import { Post } from "@/interfaces/post";
 import { Project } from "@/interfaces/project";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
-
+import { POSTS_PER_PAGE, PROJECTS_PER_PAGE } from "./constants";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-export async function getPostSlugs() {
+export const getPostSlugs = async () => {
   return fs.readdirSync(postsDirectory);
-}
+};
 
-export async function getPostBySlug(slug: string) {
+export const getPostBySlug = async (slug: string) => {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
   return { ...data, slug: realSlug, content } as Post;
-}
+};
 
-export async function getAllPosts(): Promise<Array<Post>> {
+export const getAllPosts = async (): Promise<Array<Post>> => {
   try {
     const slugs = await getPostSlugs();
     if (!slugs) {
@@ -30,14 +30,14 @@ export async function getAllPosts(): Promise<Array<Post>> {
     }
 
     const posts = await Promise.all(
-      slugs.map(async (slug) => {
+      slugs.map(async slug => {
         try {
           return await getPostBySlug(slug);
         } catch (error) {
           console.error(`Error fetching post for slug "${slug}":`, error);
           return null;
         }
-      })
+      }),
     );
 
     if (posts == null) {
@@ -45,31 +45,47 @@ export async function getAllPosts(): Promise<Array<Post>> {
     }
 
     // @ts-ignore
-    return posts.filter(Boolean).sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-
+    return posts
+      .filter(Boolean)
+      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   } catch (error) {
     console.error(`Error fetching all posts:`, error);
     return [];
   }
-}
+};
 
+export const getPaginatedPosts = async (
+  currentPage: number,
+): Promise<{ posts: Array<Post>; totalPages: number } | never> => {
+  try {
+    const posts = await getAllPosts();
+    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+    const paginatedPosts = posts.slice(
+      (currentPage - 1) * POSTS_PER_PAGE,
+      currentPage * POSTS_PER_PAGE,
+    );
+    return { posts: paginatedPosts, totalPages };
+  } catch (error: any) {
+    throw error;
+  }
+};
 
 const projectsDirectory = join(process.cwd(), "_projects");
 
-export async function getProjectSlugs() {
+export const getProjectSlugs = async () => {
   return fs.readdirSync(projectsDirectory);
-}
+};
 
-export async function getProjectBySlug(slug: string) {
+export const getProjectBySlug = async (slug: string) => {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(projectsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data } = matter(fileContents);
 
   return { ...data, slug: realSlug } as Project;
-}
+};
 
-export async function getAllProjects(): Promise<Array<Project>> {
+export const getAllProjects = async (): Promise<Array<Project>> => {
   try {
     const slugs = await getProjectSlugs();
     if (!slugs) {
@@ -77,22 +93,40 @@ export async function getAllProjects(): Promise<Array<Project>> {
     }
 
     const projects = await Promise.all(
-      slugs.map(async (slug) => {
+      slugs.map(async slug => {
         try {
           return await getProjectBySlug(slug);
         } catch (error) {
           console.error(`Error fetching project for slug "${slug}":`, error);
           return null;
         }
-      })
+      }),
     );
 
     const filteredProjects = projects.filter(Boolean);
 
     // @ts-ignore
-    return filteredProjects.sort((project1, project2) => (project1.date > project2.date ? -1 : 1));
+    return filteredProjects.sort((project1, project2) =>
+      project1.date > project2.date ? -1 : 1,
+    );
   } catch (error) {
     console.error(`Error fetching all projects:`, error);
     return [];
   }
-}
+};
+
+export const getPaginatedProjects = async (
+  currentPage: number,
+): Promise<{ projects: Array<Project>; totalPages: number } | never> => {
+  try {
+    const allProjects = await getAllProjects();
+    const totalPages = Math.ceil(allProjects.length / PROJECTS_PER_PAGE);
+    const paginatedProjects = allProjects.slice(
+      (currentPage - 1) * PROJECTS_PER_PAGE,
+      currentPage * PROJECTS_PER_PAGE,
+    );
+    return { projects: paginatedProjects, totalPages };
+  } catch (error: any) {
+    throw error;
+  }
+};

@@ -4,7 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write \"src/**/*.tsx\" \"test/**/*.tsx\""
+    "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.ts\""
   },
   "dependencies": {
     "@types/flexsearch": "^0.7.6",
