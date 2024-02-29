@@ -22,7 +22,7 @@ export const getPostBySlug = async (slug: string) => {
   return { ...data, slug: realSlug, content } as Post;
 };
 
-export const getAllPosts = async (): Promise<Array<Post>> => {
+export async function getAllPosts(): Promise<Array<Post>> {
   try {
     const slugs = await getPostSlugs();
     if (!slugs) {
@@ -40,19 +40,16 @@ export const getAllPosts = async (): Promise<Array<Post>> => {
       }),
     );
 
-    if (posts == null) {
-      throw new Error("posts is null");
-    }
+    const filteredPosts = posts.filter(post => post !== null) as Post[];
 
-    // @ts-ignore
-    return posts
-      .filter(Boolean)
-      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    return filteredPosts.sort((post1, post2) => {
+      return post1.date > post2.date ? -1 : 1;
+    });
   } catch (error) {
     console.error(`Error fetching all posts:`, error);
     return [];
   }
-};
+}
 
 export const getPaginatedPosts = async (
   currentPage: number,
