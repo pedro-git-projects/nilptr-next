@@ -40,7 +40,7 @@ const URLPagination: React.FC<Props> = ({ totalPages }) => {
   const handlePageClick = (pageNumber: number) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", pageNumber.toString());
-    window.location.href = `${pathname}?${params.toString()}`;
+    window.location.href = createPageURL(pageNumber);
   };
 
   const renderPaginationButtons = () => {
