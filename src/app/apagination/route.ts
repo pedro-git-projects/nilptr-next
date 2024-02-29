@@ -15,9 +15,9 @@ export const POST = async (req: Request) => {
     if (!currentPage) {
       return Response.json({ error: "currentPage is undefined" });
     }
-    const posts = await getAllProjects();
-    const totalPages = Math.ceil(posts.length / PROJECTS_PER_PAGE);
-    const paginatedPosts = posts.slice(
+    const projects = await getAllProjects();
+    const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+    const paginatedPosts = projects.slice(
       (currentPage - 1) * PROJECTS_PER_PAGE,
       currentPage * PROJECTS_PER_PAGE,
     );

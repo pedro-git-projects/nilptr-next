@@ -1,6 +1,5 @@
 "use client";
 
-import { getPaginatedProjects } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Project } from "@/interfaces/project";
 import ProjectCard from "../_components/project-card";
