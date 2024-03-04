@@ -65,6 +65,14 @@
       @apply px-6 py-3;
     }
 
+    ul {
+      @apply list-disk;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
 
   }
 
