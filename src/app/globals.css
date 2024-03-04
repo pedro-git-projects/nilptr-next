@@ -66,14 +66,12 @@
     }
 
     ul {
-      @apply list-disk;
+      @apply list-disc;
     }
 
     ol {
       @apply list-decimal;
     }
-
-
   }
 
   main {
