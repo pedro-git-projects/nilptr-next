@@ -35,16 +35,16 @@ Rust é uma linguagem de programação que busca maximizar performance e seguran
 
 Para tanto, existem algumas regras :
 
-- Cada valor tem um dono.
-- Só pode haver um dono por vez.
-- Se o dono do valor sair de escopo, o valor é liberado.
+>Cada valor tem um dono.
+>Só pode haver um dono por vez.
+>Se o dono do valor sair de escopo, o valor é liberado.
 
 Além disso, existem as seguintes regras para referências:
 
-- Em qualquer momento, só pode haver uma de duas coisas:
-    1. Uma referência mutável para um valor ou
-    2. Qualquer quantidade de referências imutáveis para um valor
-- Referências devem ser sempre válidas
+>Em qualquer momento, só pode haver uma de duas coisas:
+    >Uma referência mutável para um valor ou;
+    >Qualquer quantidade de referências imutáveis para um valor;
+>Referências devem ser sempre válidas
 
 
 Caso algum desses critérios não seja cumprido, o programa não pode ser compilado.
