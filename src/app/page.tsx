@@ -9,14 +9,13 @@ const Index: React.FC = () => {
             <h1 className="text-4xl font-extrabold sm:text-5xl">
               nilptr
               <strong className="font-extrabold text-[#cc241d] sm:block pt-4">
-                {" "}engenharia de software descomplicada{" "}
+                {" "}
+                engenharia de software descomplicada{" "}
               </strong>
             </h1>
 
             <p className="mt-4 sm:text-xl/relaxed">
-              <span className="font-bold">
-                construindo o futuro bit a bit.
-              </span>
+              <span className="font-bold">construindo o futuro bit a bit.</span>
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

@@ -56,10 +56,12 @@ const Resume: React.FC = () => {
                 <span className="font-bold">nilptr</span>
               </div>
               <p className="mt-2">
-                nilptr é a junção das palavras "nil pointer", traduzida do inglês como "ponteiro nulo". Este é o nome do meu canal no YouTube e a marca que escolhi para representar minha atuação como contratante independente.
+                nilptr é a junção das palavras "nil pointer", traduzida do
+                inglês como "ponteiro nulo". Este é o nome do meu canal no
+                YouTube e a marca que escolhi para representar minha atuação
+                como contratante independente.
               </p>
             </div>
-
 
             <div className="mb-6">
               <div className="flex justify-between flex-wrap gap-2 w-full">
@@ -78,8 +80,8 @@ const Resume: React.FC = () => {
               </div>
               <p className="mt-2">
                 Atualmente sou consultor independente, tendo prestado serviços
-                para empresas como a Toguishi Japan e o Colégio Cenecista Doutor
-                José Ferreira.
+                para empresas como a Toguishi Japan e o Instituto Brasileiro de
+                Ensino, Desenvolvimento e Pesquisa.
                 <br />
                 <br />
                 Mantenho o canal
@@ -90,10 +92,17 @@ const Resume: React.FC = () => {
                 no Youtube.
                 <br />
                 <br />
-                Trabalhei ainda na multinacional NTT Data e desempenhei diversos
-                trabalhos dentro da academia, o último sendo liderar uma Squad
-                na fábrica de software do Instituto de Educação Superior de
-                Brasília.
+                Trabalhei na multinacional NTT Data, onde adquiri vasta
+                experiência em projetos de grande escala. Também liderei uma
+                Squad na fábrica de software do Instituto de Educação Superior
+                de Brasília, coordenando o desenvolvimento de um sistema
+                interno. Atualmente, estou atuando no Instituto Brasileiro de
+                Ensino, Desenvolvimento e Pesquisa (IDP), onde estou
+                desenvolvendo uma plataforma web completamente customizada para
+                visualização e processamento de dados geoespaciais. Esta
+                plataforma integra diversas tecnologias avançadas para a
+                divulgação de projetos de pesquisa, permitindo uma análise
+                detalhada e interativa desses dados.
               </p>
             </div>
 
@@ -103,15 +112,17 @@ const Resume: React.FC = () => {
               </div>
               <ul className="list-disc pl-1">
                 <li className="pb-1">
-                  Habilidades avançadas em desenvolvimento de back-end usando Go
-                  e Node.
+                  Habilidades avançadas em desenvolvimento de back-end usando
+                  Java, Go e Node.
                 </li>
                 <li className="pb-1">
                   Versado em desenvolvimento frontend com React, Svelte, HUGO,
                   HTML, CSS e Tailwind.
                 </li>
                 <li className="pb-1">
-                  Experiência sólida em desenvolvimento mobile com Flutter e React Native, criando aplicativos responsivos para diversas plataformas.
+                  Experiência sólida em desenvolvimento mobile com Flutter e
+                  React Native, criando aplicativos responsivos para diversas
+                  plataformas.
                 </li>
                 <li className="pb-1">
                   Forte entendimento de algoritmos, estruturas de dados e
