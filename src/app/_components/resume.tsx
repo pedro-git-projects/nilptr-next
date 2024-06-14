@@ -84,25 +84,16 @@ const Resume: React.FC = () => {
                 Ensino, Desenvolvimento e Pesquisa.
                 <br />
                 <br />
-                Mantenho o canal
-                <a href="https://www.youtube.com/@nilptr" target="_blank">
-                  {" "}
-                  niltpr{" "}
-                </a>
-                no Youtube.
-                <br />
-                <br />
-                Trabalhei na multinacional NTT Data, onde adquiri vasta
-                experiência em projetos de grande escala. Também liderei uma
-                Squad na fábrica de software do Instituto de Educação Superior
-                de Brasília, coordenando o desenvolvimento de um sistema
-                interno. Atualmente, estou atuando no Instituto Brasileiro de
-                Ensino, Desenvolvimento e Pesquisa (IDP), onde estou
-                desenvolvendo uma plataforma web completamente customizada para
-                visualização e processamento de dados geoespaciais. Esta
-                plataforma integra diversas tecnologias avançadas para a
-                divulgação de projetos de pesquisa, permitindo uma análise
-                detalhada e interativa desses dados.
+                Trabalhei na multinacional NTT Data, onde adquiri experiência em
+                projetos de grande escala. Também liderei uma Squad na fábrica
+                de software do Instituto de Educação Superior de Brasília,
+                coordenando o desenvolvimento de um sistema interno. Atualmente,
+                estou atuando no Instituto Brasileiro de Ensino, Desenvolvimento
+                e Pesquisa (IDP), onde estou desenvolvendo uma plataforma web
+                completamente customizada para visualização e processamento de
+                dados geoespaciais. Esta plataforma integra diversas tecnologias
+                avançadas para a divulgação de projetos de pesquisa, permitindo
+                uma análise detalhada e interativa desses dados.
               </p>
             </div>
 
