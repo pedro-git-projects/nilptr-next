@@ -79,21 +79,7 @@ const Resume: React.FC = () => {
                 <span className="font-bold">Atuação Profissional</span>
               </div>
               <p className="mt-2">
-                Atualmente sou consultor independente, tendo prestado serviços
-                para empresas como a Toguishi Japan e o Instituto Brasileiro de
-                Ensino, Desenvolvimento e Pesquisa.
-                <br />
-                <br />
-                Trabalhei na multinacional NTT Data, onde adquiri experiência em
-                projetos de grande escala. Também liderei uma Squad na fábrica
-                de software do Instituto de Educação Superior de Brasília,
-                coordenando o desenvolvimento de um sistema interno. Atualmente,
-                estou atuando no Instituto Brasileiro de Ensino, Desenvolvimento
-                e Pesquisa (IDP), onde estou desenvolvendo uma plataforma web
-                completamente customizada para visualização e processamento de
-                dados geoespaciais. Esta plataforma integra diversas tecnologias
-                avançadas para a divulgação de projetos de pesquisa, permitindo
-                uma análise detalhada e interativa desses dados.
+                Atualmente, atuo na NT Consult, alocado em um projeto global do Santander F1rst, na área de tesouraria e derivativos. Anteriormente, fui consultor independente para o Instituto Brasileiro de Ensino, Desenvolvimento e Pesquisa (IDP) e engenheiro de software no banco Itaú através da multinacional japonesa NTT Data.
               </p>
             </div>
 
